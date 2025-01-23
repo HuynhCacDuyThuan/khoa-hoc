@@ -14,11 +14,15 @@ import ArticleDetail from "./user/ArticleDetail";
 import DanangCourse from "./user/DanangCourse";
 import OnlineCourse from "./Component/OnlineCourseSlide";
 import OnlineCourseUpgrade from "./Component/OnlineCourseUpgrade";
+import AdminSidebar from "./admin/AdminSidebar";
 
 
 const App = () => {
+  const userRole = localStorage.getItem("loggedInUser")
+    ? JSON.parse(localStorage.getItem("loggedInUser")).role
+    : "guest"; 
   return (
-    <Router>
+    <Router >
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<LoginForm />} />
@@ -33,6 +37,7 @@ const App = () => {
         <Route path="/articleDetail" element={<ArticleDetail/>} />
         <Route path="/da-nang" element={<DanangCourse/>} />
         <Route path="/khoa-hoc-co-vua-doi-tuyen" element={<OnlineCourseUpgrade/>} />
+        <Route path="/admin" element={<AdminSidebar />} />
       </Routes>
     </Router>
   );

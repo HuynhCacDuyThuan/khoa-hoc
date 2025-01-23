@@ -11,6 +11,7 @@ const LoginForm = () => {
   const users = [
     { username: "admin", password: "admin123", role: "admin" },
     { username: "user", password: "user123", role: "user" },
+    { username: "teachers", password: "teachers", role: "teacher" },
   ];
 
   // State
@@ -37,10 +38,16 @@ const LoginForm = () => {
       localStorage.setItem("loggedInUser", JSON.stringify(user));
   
       // Điều hướng theo vai trò
-      if (user.role === "admin") {
-        navigate("/admin-dashboard");
+      if (user.role === "admin" || user.role === "teacher") {
+    
+
+        navigate("/admin");
+        window.location.reload();
       } else if (user.role === "user") {
+       
+
         navigate("/profile");
+        window.location.reload();
       }
     } else {
       setError("Tên đăng nhập hoặc mật khẩu không chính xác!");

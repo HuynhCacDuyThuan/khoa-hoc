@@ -37,10 +37,15 @@ const Profile = () => {
             TH
           </div>
           {/* User Info */}
-          <div className="ms-3">
-            <h5 className="mb-0">Xin chào,</h5>
-            <h4 className="fw-bold">Thuần Huỳnh</h4>
-          </div>
+          <div className="d-flex justify-content-between align-items-center">
+  <div className="ms-3">
+    <h5 className="mb-0">Xin chào,</h5>
+    <h4 className="fw-bold">Thuần Huỳnh</h4>
+  </div>
+  {/* Nút xác thực */}
+  <button className="btn btn-primary ms-3">Xác thực</button>
+</div>
+
         </div>
         {/* Notification Icon */}
         <button className="btn btn-light position-relative">

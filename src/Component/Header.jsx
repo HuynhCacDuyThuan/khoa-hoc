@@ -53,20 +53,13 @@ const Header = () => {
                   Học Cờ Vua tại Đà Nẵng
                 </a>
               </li>
+             
               <li>
                 <a
                   className="dropdown-item"
-                  href="https://covuadaisy.com/khoa-trung-cap/"
+                  href="/khoa-hoc-co-vua-doi-tuyen"
                 >
-                  Lớp Online Trung Cấp
-                </a>
-              </li>
-              <li>
-                <a
-                  className="dropdown-item"
-                  href="https://covuadaisy.com/khoa-hoc-nang-cao/"
-                >
-                  Lớp Online Nâng Cao
+                  Lớp Online đội tuyển
                 </a>
               </li>
             </ul>
@@ -107,6 +100,11 @@ const Header = () => {
 
         {/* Social Icons */}
         <div className="d-none d-md-flex">
+        {user && (
+          <div className="me-3">
+      <span>Xin chào,</span> <strong>{user.username}</strong>
+    </div>
+)}
           <a
             href="https://www.facebook.com/CLBDaisyCoVua"
             target="_blank"
