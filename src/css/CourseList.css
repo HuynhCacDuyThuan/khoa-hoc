@@ -1,0 +1,76 @@
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .course-thumbnail img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  .course-details {
+    padding: 16px;
+  }
+
+  .course-title {
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold;
+  }
+
+  .original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 8px;
+  }
+
+  .discounted-price {
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  .course-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .buy-course-btn {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .buy-course-btn:hover {
+    background-color: #2980b9;
+  }
+
+  .course-rating {
+    margin-top: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .course-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .course-grid {
+      grid-template-columns: 1fr;
+    }
+  }

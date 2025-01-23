@@ -1,0 +1,15 @@
+/* Đặt chiều rộng và chiều cao tối đa cho hình ảnh */
+.slider-image {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng cột */
+    max-height: 150px; /* Chiều cao tối đa */
+    object-fit: cover; /* Cắt ảnh nếu vượt quá tỷ lệ nhưng vẫn giữ tỷ lệ gốc */
+    margin: auto; /* Căn giữa hình ảnh */
+    display: block; /* Giúp hình ảnh nằm trong phần tử cha */
+  }
+  
+  /* Căn giữa các item trong carousel */
+  .carousel-item .row {
+    justify-content: center;
+    align-items: center;
+  }
+  

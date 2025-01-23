@@ -1,0 +1,7 @@
+.chess-image {
+    max-width: 300px; /* Đặt chiều rộng tối đa cho hình ảnh */
+    height: auto; /* Đảm bảo giữ tỷ lệ hình ảnh */
+    margin: auto; /* Căn giữa hình ảnh trong cột */
+    display: block; /* Đảm bảo hình ảnh nằm giữa */
+  }
+  
